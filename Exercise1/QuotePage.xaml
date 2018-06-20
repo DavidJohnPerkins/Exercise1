@@ -5,7 +5,12 @@
                 x:Class="Exercise1.QuotePage"
                 Padding="20" Android:Padding="20,30,20,20">
     <StackLayout BindingContext="{x:Reference slider}">
-        <Button Text="Next" FontSize="Medium" HorizontalOptions="Center" Clicked="Handle_Clicked"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+            <Button WidthRequest="80" Text="First" FontSize="Medium" Clicked="Handle_Clicked" BackgroundColor="Silver"/>
+            <Button WidthRequest="80" Text="Previous" FontSize="Medium" Clicked="Handle_Clicked" BackgroundColor="Silver"/>
+            <Button WidthRequest="80" Text="Next" FontSize="Medium" Clicked="Handle_Clicked" BackgroundColor="Silver"/>
+            <Button WidthRequest="80" Text="Last" FontSize="Medium" Clicked="Handle_Clicked" BackgroundColor="Silver"/>
+        </StackLayout>
         <Label Text="{Binding Value, StringFormat='Font Size: {0:F0}'}" /> 
         <Slider Maximum="72" Minimum="6" Value="16" HorizontalOptions="FillAndExpand" x:Name="slider" />
         <Label Text="Quote Here" FontSize="{Binding Value}" x:Name="quoteLabel" />
